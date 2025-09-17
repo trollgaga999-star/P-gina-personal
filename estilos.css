@@ -1,86 +1,188 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
+/* Estilos globales y reseteo */
 body {
     font-family: Arial, sans-serif;
-    background-color: #fff;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f2f5;
     color: #333;
 }
 
-header {
-    background-color: #003d35;
-    padding: 15px;
-    text-align: center;
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
 }
 
-header nav {
+/* Header */
+.header {
+    background-color: #002244;
+    color: white;
+    padding: 10px 0;
+}
+
+.header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-header .logo img {
+.header-logo {
     height: 40px;
 }
 
-header .siged h1 {
-    color: #fff;
-    font-size: 24px;
-    margin-left: 10px;
+.header-text {
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1.2;
+    margin-right: auto;
+    padding-left: 10px;
 }
 
-main {
-    padding: 30px;
-    background-color: #f3f3f3;
+.siged {
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 20px;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 0 auto;
+.menu-icon {
+    width: 30px;
+    height: 25px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.menu-icon .bar {
+    width: 100%;
+    height: 3px;
+    background-color: white;
+}
+
+/* Main Content */
+.main-content {
     background-color: #fff;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-h2 {
-    color: #003d35;
-    text-align: center;
+.banner {
+    background-image: url('https://www.gob.mx/cms/uploads/image/file/286015/BANNER_SEP_Mantenimiento_Portal.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 150px;
+}
+
+.page-title {
+    font-size: 28px;
+    color: #002244;
+    border-bottom: 2px solid #002244;
+    padding-bottom: 10px;
+    margin-top: 20px;
+}
+
+.breadcrumb {
+    font-size: 12px;
+    color: #666;
+    margin-top: -10px;
     margin-bottom: 20px;
 }
 
-.consulta-titulo h3 {
-    color: #003d35;
+.section-title {
     font-size: 22px;
+    color: #004d99;
+    font-weight: normal;
+    margin-top: 30px;
     margin-bottom: 15px;
 }
 
-.titulo {
-    background-color: #e4f1f1;
-    padding: 15px;
-    border-radius: 5px;
+.content-box {
+    border: 1px solid #ddd;
+    padding: 20px;
+    background-color: #f9f9f9;
 }
 
-.titulo h4 {
-    color: #003d35;
-    font-size: 20px;
+.subtitle {
+    font-size: 18px;
+    color: #000;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+.details-grid {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.image-section {
+    text-align: center;
+}
+
+.certificate-image {
+    width: 100%;
+    height: auto;
+    border: 1px solid #ccc;
+}
+
+.info-section .detail-item {
     margin-bottom: 10px;
 }
 
-.detalles p {
-    font-size: 16px;
-    color: #003d35;
-    margin: 5px 0;
+.info-section .label {
+    font-weight: bold;
+    color: #555;
+    margin-right: 5px;
 }
 
-footer {
-    background-color: #003d35;
-    color: #fff;
+.info-section .value {
+    color: #000;
+}
+
+.disclaimer {
+    font-size: 14px;
+    color: #666;
+    background-color: #eef4f9;
+    border-left: 5px solid #004d99;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+/* Footer */
+.footer {
+    background-color: #002244;
+    color: white;
+    padding: 20px;
     text-align: center;
-    padding: 10px 0;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
+    font-size: 12px;
+}
+
+.footer-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.footer-links, .footer-legal, .footer-social {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+    flex: 1;
+    min-width: 150px;
+}
+
+.footer-links a, .footer-legal a, .footer-social a {
+    color: white;
+    text-decoration: none;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.footer-links a:hover, .footer-legal a:hover, .footer-social a:hover {
+    text-decoration: underline;
 }
