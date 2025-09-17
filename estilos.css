@@ -1,339 +1,86 @@
-/* Variables de color basadas en la imagen */
-:root {
-    --gob-dark-green: #1a4d33; /* Verde oscuro para el header top y footer */
-    --gob-medium-green: #30694e; /* Verde del banner debajo del header */
-    --gob-text-color: #333333; /* Color de texto general */
-    --gob-light-gray-bg: #f9f9f9; /* Fondo principal del contenido */
-    --gob-border-color: #e0e0e0; /* Color de bordes */
-    --gob-subtitle-color: #4a4a4a; /* Color para subtítulos y breadcrumbs */
-    --gob-card-header-bg: #f2f2f2; /* Fondo de la barra "Detalles" */
-    --gob-card-border: #cccccc; /* Borde de la tarjeta de detalles */
-    --gob-disclaimer-bg: #e6f7ff; /* Fondo azul claro del aviso */
-    --gob-disclaimer-border: #99d6ff; /* Borde azul del aviso */
-    --gob-link-color: #007bff; /* Color de enlaces */
-}
-
-/* Estilos generales */
-body {
-    font-family: Arial, Helvetica, sans-serif; /* Más parecido a la imagen */
+* {
     margin: 0;
     padding: 0;
-    line-height: 1.5;
-    color: var(--gob-text-color);
-    background-color: var(--gob-light-gray-bg);
-    font-size: 15px; /* Ajuste de tamaño de fuente general */
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    color: #333;
+}
+
+header {
+    background-color: #003d35;
+    padding: 15px;
+    text-align: center;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo img {
+    height: 40px;
+}
+
+header .siged h1 {
+    color: #fff;
+    font-size: 24px;
+    margin-left: 10px;
+}
+
+main {
+    padding: 30px;
+    background-color: #f3f3f3;
 }
 
 .container {
-    width: 90%;
-    max-width: 1100px; /* Ajuste para que se vea más compacto como en la imagen */
+    max-width: 1200px;
     margin: 0 auto;
-}
-
-a {
-    color: var(--gob-link-color);
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-/* Header */
-.header {
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1); /* Sombra más sutil */
     background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.header-top {
-    background-color: var(--gob-dark-green); /* Verde oscuro */
-    padding: 8px 0;
-    text-align: right;
-}
-
-.header-top .container {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-}
-
-/* Logo de GOBIERNO DE MÉXICO en la barra superior */
-.header-logo {
-    height: 30px; /* Tamaño del logo ajustado */
-    /* Usamos una imagen de pleca completa que incluye "GOBIERNO DE MÉXICO" */
-    content: url('https://raw.githubusercontent.com/digitalgdl/Framework-GDL/master/img/logo-gobierno-de-mexico.svg'); /* O una similar que encuentres/crees */
-    filter: brightness(0) invert(1); /* Para que el logo se vea blanco sobre el fondo verde */
-}
-
-.header-main {
-    background-color: #ffffff; /* Fondo blanco del área principal del header */
-    padding: 10px 0;
-}
-
-.header-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-/* Logo de SEP y SIGED */
-.sep-logo {
-    height: 50px; /* Tamaño del logo de SEP */
-    /* Este es el logo que parece en la imagen */
-    content: url('https://www.siged.sep.gob.mx/SIGED/resources/images/logo-SEP.png'); /* URL de un logo de SEP similar */
-    margin-right: 15px;
-}
-
-.navbar {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.navbar-title {
-    font-weight: normal; /* No tan bold como antes */
-    color: var(--gob-text-color);
-    margin-right: 0; /* Ajuste para gap */
-    text-transform: uppercase;
-    font-size: 0.9em;
-}
-
-.nav-link {
-    font-weight: normal;
-    color: var(--gob-text-color);
-    text-transform: uppercase;
-    font-size: 0.9em;
-}
-
-.menu-toggle {
-    background: none;
-    border: none;
-    font-size: 1.8em; /* Tamaño del icono de menú */
-    cursor: pointer;
-    color: var(--gob-text-color);
-    padding: 0 5px;
-}
-
-/* Banner de "Consulta de documentos..." */
-.header-bottom-banner {
-    background-color: var(--gob-medium-green); /* Verde más claro del banner */
-    color: #fff;
-    padding: 15px 0;
-    margin-bottom: 20px;
-}
-
-.header-bottom-banner h1 {
-    margin: 0;
-    font-size: 1.5em;
-    font-weight: normal;
-}
-
-/* Main Content */
-.main-content {
-    padding: 20px 0;
-}
-
-.breadcrumb {
-    font-size: 0.85em;
-    margin-bottom: 20px;
-    color: var(--gob-subtitle-color);
-}
-
-.breadcrumb a {
-    color: var(--gob-subtitle-color);
-}
-
-.title-section {
-    border-bottom: 1px solid var(--gob-border-color); /* Borde más sutil */
-    padding-bottom: 10px;
-    margin-bottom: 20px;
-}
-
-.title-section h1 {
-    font-size: 1.8em; /* Ajuste de tamaño */
-    color: var(--gob-text-color); /* Color de texto normal */
-    margin: 0;
-    font-weight: bold; /* El título principal parece bold */
-}
-
-.title-section .subtitle {
-    font-size: 1.2em;
-    color: var(--gob-subtitle-color);
-    margin-top: 5px;
-    font-weight: bold; /* También parece bold */
-}
-
-.details-card {
-    display: flex;
-    background-color: #ffffff;
-    border: 1px solid var(--gob-card-border); /* Borde de tarjeta */
-    border-radius: 4px; /* Bordes más rectos */
-    overflow: hidden;
-    margin-bottom: 30px;
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05); /* Sombra ligera */
-}
-
-.details-left {
-    background-color: var(--gob-card-header-bg); /* Fondo gris claro de la barra "Detalles" */
-    padding: 15px 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border-right: 1px solid var(--gob-card-border);
-    flex-shrink: 0;
-    font-weight: bold;
-    color: var(--gob-text-color);
-}
-
-.icon-container {
+h2 {
+    color: #003d35;
     text-align: center;
-    color: var(--gob-text-color);
-    font-weight: bold;
+    margin-bottom: 20px;
 }
 
-.icon {
-    font-size: 3em; /* Tamaño del icono */
-    display: block;
-    margin-bottom: 5px;
-    /* Para replicar el icono de documento en la imagen, si es un carácter Unicode: */
-    content: "📄"; /* Asegúrate de que el charset es utf-8 */
-}
-
-.details-right {
-    padding: 15px 25px;
-    flex-grow: 1;
-    display: grid; /* Usamos grid para una mejor alineación de filas */
-    grid-template-columns: auto 1fr; /* Columna para label y columna para value */
-    gap: 8px 15px; /* Espaciado entre filas y columnas */
-    align-items: baseline;
-}
-
-.data-row .label { /* Específico para las etiquetas dentro de .details-right */
-    font-weight: bold; /* Las etiquetas de datos parecen bold */
-    color: var(--gob-text-color);
-    white-space: nowrap; /* Evita que el label se rompa */
-}
-
-.data-row .value {
-    color: var(--gob-text-color);
-    text-transform: uppercase;
-}
-
-/* Ajuste específico para que cada par label/value sea una fila de grid */
-.details-right > div {
-    display: contents; /* Hace que los hijos (label y value) participen en el grid del padre */
-}
-
-
-.disclaimer {
-    font-size: 0.85em;
-    color: var(--gob-text-color);
-    background-color: var(--gob-disclaimer-bg);
-    border-left: 5px solid var(--gob-disclaimer-border);
-    padding: 15px;
-    border-radius: 4px;
-    margin-top: 20px;
-}
-
-/* Footer */
-.footer {
-    background-color: var(--gob-dark-green); /* Verde oscuro */
-    color: var(--gob-footer-text); /* El footer tiene texto blanco */
-    padding: 30px 0;
-    font-size: 0.85em;
-}
-
-.footer-content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 20px;
-}
-
-.footer-col {
-    flex: 1;
-    min-width: 200px;
-}
-
-.footer-col h4 {
-    color: #ffffff; /* Títulos del footer en blanco */
-    margin-top: 0;
+.consulta-titulo h3 {
+    color: #003d35;
+    font-size: 22px;
     margin-bottom: 15px;
-    font-weight: bold; /* Títulos del footer bold */
 }
 
-.footer-col ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+.titulo {
+    background-color: #e4f1f1;
+    padding: 15px;
+    border-radius: 5px;
 }
 
-.footer-col ul li {
-    margin-bottom: 8px;
+.titulo h4 {
+    color: #003d35;
+    font-size: 20px;
+    margin-bottom: 10px;
 }
 
-.footer-col a {
-    color: #ffffff; /* Enlaces del footer en blanco */
-    text-decoration: none;
+.detalles p {
+    font-size: 16px;
+    color: #003d35;
+    margin: 5px 0;
 }
 
-.footer-col a:hover {
-    text-decoration: underline;
-}
-
-/* Logo de GOBIERNO DE MÉXICO en el footer */
-.footer-logo {
-    height: 40px; /* Tamaño del logo del gobierno en el footer */
-    filter: brightness(0) invert(1); /* Para que sea blanco */
-    content: url('https://raw.githubusercontent.com/digitalgdl/Framework-GDL/master/img/logo-gobierno-de-mexico.svg'); /* Mismo logo que arriba */
-}
-
-/* Media Queries para responsividad */
-@media (max-width: 768px) {
-    .header-content {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .sep-logo {
-        margin-bottom: 15px;
-    }
-
-    .navbar {
-        flex-direction: column;
-        width: 100%;
-        margin-top: 10px;
-    }
-
-    .navbar-title, .nav-link {
-        margin: 5px 0;
-    }
-
-    .details-card {
-        flex-direction: column;
-    }
-
-    .details-left {
-        border-right: none;
-        border-bottom: 1px solid var(--gob-card-border);
-    }
-
-    .details-right {
-        grid-template-columns: 1fr; /* Una columna para móviles */
-        padding: 15px;
-    }
-
-    .data-row .label {
-        margin-bottom: 5px; /* Espacio entre label y value en móvil */
-    }
-
-    .footer-content {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .footer-col {
-        min-width: auto;
-    }
+footer {
+    background-color: #003d35;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
 }
