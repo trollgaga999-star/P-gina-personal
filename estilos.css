@@ -1,52 +1,68 @@
-/* estilos.css */
-
-/* Variables y Reseteo básico */
+/* Variables de color */
 :root {
-    --color-primary: #1e3966;
-    --color-secondary: #0072d2;
-    --color-tertiary: #5c84b4;
-    --color-text: #333;
-    --color-light-gray: #f5f5f5;
-    --color-border: #ccc;
-    --font-family: 'Montserrat', sans-serif;
+    --gob-green: #1a4d33; /* Verde oscuro del header */
+    --gob-light-green: #337155; /* Verde de la barra inferior del header */
+    --gob-text-gray: #4a4a4a; /* Gris para textos principales */
+    --gob-light-gray: #f5f5f5; /* Fondo del main content */
+    --gob-blue-link: #0056b3; /* Azul para enlaces */
+    --gob-border-gray: #e0e0e0; /* Bordes sutiles */
+    --gob-card-bg: #ffffff; /* Fondo de las tarjetas */
+    --gob-footer-bg: #1a4d33; /* Fondo del footer */
+    --gob-footer-text: #ffffff; /* Texto del footer */
+    --gob-breadcrumb-gray: #7a7a7a; /* Color del breadcrumb */
 }
 
-* {
-    box-sizing: border-box;
+/* Estilos generales */
+body {
+    font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
-}
-
-body {
-    font-family: var(--font-family);
-    color: var(--color-text);
     line-height: 1.6;
-    background-color: var(--color-light-gray);
+    color: var(--gob-text-gray);
+    background-color: var(--gob-light-gray);
 }
 
 .container {
-    max-width: 1100px;
+    width: 90%;
+    max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+}
+
+a {
+    color: var(--gob-blue-link);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 /* Header */
 .header {
-    background-color: #fff;
-    border-bottom: 2px solid var(--color-secondary);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    background-color: #fff; /* Asegura un fondo blanco para el header principal */
 }
 
 .header-top {
-    background-color: var(--color-primary);
-    padding: 10px 0;
+    background-color: var(--gob-green); /* Barra superior verde */
+    padding: 5px 0;
+    text-align: right;
+}
+
+.header-top .container {
+    display: flex;
+    justify-content: flex-start; /* Alinea el logo a la izquierda */
+    align-items: center;
 }
 
 .header-logo {
-    height: 40px;
+    height: 40px; /* Ajusta el tamaño del logo del gobierno */
+    content: url('https://framework-gb.cdn.gob.mx/assets/images/gobmx-logo-small.svg'); /* Logo de GOB MX */
 }
 
 .header-main {
-    padding: 10px 0;
+    border-bottom: 5px solid var(--gob-light-green); /* Barra verde inferior */
+    padding: 15px 0;
 }
 
 .header-content {
@@ -56,185 +72,231 @@ body {
 }
 
 .sep-logo {
-    height: 50px;
+    height: 60px; /* Ajusta el tamaño del logo de SEP */
+    margin-right: 20px;
+    content: url('https://framework-gb.cdn.gob.mx/assets/images/pleca_gob_mx.svg'); /* Logo del SEP */
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
 }
 
 .navbar-title {
-    color: var(--color-tertiary);
     font-weight: 700;
+    color: var(--gob-text-gray);
     margin-right: 20px;
+    text-transform: uppercase;
 }
 
 .nav-link {
-    color: var(--color-secondary);
-    text-decoration: none;
     font-weight: 700;
+    color: var(--gob-text-gray);
+    margin-right: 20px;
 }
 
 .menu-toggle {
-    display: none;
-    font-size: 24px;
     background: none;
-    border: none;
+    border: 1px solid var(--gob-border-gray);
+    padding: 5px 10px;
+    font-size: 1.2em;
     cursor: pointer;
+    color: var(--gob-text-gray);
+    border-radius: 4px;
 }
 
 /* Main Content */
 .main-content {
-    background-color: #fff;
-    padding: 40px 0;
-    margin-top: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    padding: 30px 0;
 }
 
 .breadcrumb {
-    font-size: 14px;
-    color: #666;
+    font-size: 0.9em;
     margin-bottom: 20px;
+    color: var(--gob-breadcrumb-gray);
 }
 
 .breadcrumb a {
-    color: var(--color-secondary);
-    text-decoration: none;
+    color: var(--gob-breadcrumb-gray);
+}
+
+.title-section {
+    border-bottom: 2px solid var(--gob-border-gray);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .title-section h1 {
-    font-size: 28px;
-    color: var(--color-primary);
-    margin-bottom: 5px;
+    font-size: 2.2em;
+    color: var(--gob-green); /* Color del título principal */
+    margin: 0;
+    font-weight: 700;
 }
 
 .title-section .subtitle {
-    font-size: 22px;
-    color: var(--color-text);
-    border-bottom: 2px solid var(--color-secondary);
-    padding-bottom: 10px;
-    margin-bottom: 30px;
+    font-size: 1.5em;
+    color: var(--gob-text-gray);
+    margin-top: 5px;
+    font-weight: 400;
 }
 
 .details-card {
     display: flex;
-    border: 1px solid var(--color-border);
+    background-color: var(--gob-card-bg);
+    border: 1px solid var(--gob-border-gray);
     border-radius: 8px;
     overflow: hidden;
     margin-bottom: 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
 }
 
 .details-left {
-    background-color: #f0f0f0;
+    background-color: var(--gob-light-gray);
     padding: 20px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-    flex-direction: column;
+    border-right: 1px solid var(--gob-border-gray);
+    flex-shrink: 0;
 }
 
 .icon-container {
     text-align: center;
-    color: #666;
+    color: var(--gob-green); /* Color del icono */
     font-weight: 700;
 }
 
 .icon {
-    font-size: 80px;
+    font-size: 4em;
     display: block;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 .details-right {
-    padding: 20px;
+    padding: 20px 30px;
     flex-grow: 1;
 }
 
 .data-row {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+    display: flex;
+    align-items: baseline;
+}
+
+.data-row:last-child {
+    margin-bottom: 0;
 }
 
 .label {
     font-weight: 700;
-    color: var(--color-primary);
+    color: var(--gob-text-gray);
+    min-width: 150px; /* Alinea las etiquetas */
+    margin-right: 10px;
 }
 
 .value {
-    color: var(--color-text);
+    color: var(--gob-text-gray);
+    flex-grow: 1;
+    text-transform: uppercase; /* Como en la imagen, todo en mayúsculas */
 }
 
 .disclaimer {
-    background-color: #e6e6e6;
-    border-left: 5px solid #ffcc00;
+    font-size: 0.9em;
+    color: var(--gob-text-gray);
+    background-color: #e6f2f9; /* Un azul muy claro para el aviso */
+    border-left: 5px solid #007bff; /* Borde azul para el aviso */
     padding: 15px;
-    font-size: 14px;
-    color: #555;
-    margin-top: 20px;
+    border-radius: 4px;
 }
 
 /* Footer */
 .footer {
-    background-color: var(--color-primary);
-    color: #fff;
-    padding: 40px 0;
-    margin-top: 40px;
+    background-color: var(--gob-footer-bg);
+    color: var(--gob-footer-text);
+    padding: 30px 0;
+    font-size: 0.9em;
 }
 
 .footer-content {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
 }
 
 .footer-col {
     flex: 1;
-    margin: 10px;
     min-width: 200px;
 }
 
-.footer-logo {
-    height: 50px;
-}
-
 .footer-col h4 {
-    color: #fff;
+    color: var(--gob-footer-text);
+    margin-top: 0;
     margin-bottom: 15px;
+    font-weight: 700;
 }
 
 .footer-col ul {
     list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-.footer-col li a {
-    color: #fff;
+.footer-col ul li {
+    margin-bottom: 8px;
+}
+
+.footer-col a {
+    color: var(--gob-footer-text);
     text-decoration: none;
-    display: block;
-    margin-bottom: 5px;
 }
 
-.footer-col p, .footer-col a {
-    color: #fff;
-    text-decoration: none;
-    display: block;
-    margin-bottom: 5px;
+.footer-col a:hover {
+    text-decoration: underline;
 }
 
-/* Media Queries para diseño responsivo */
+.footer-logo {
+    height: 50px; /* Ajusta el tamaño del logo del gobierno en el footer */
+    filter: brightness(0) invert(1); /* Para que el logo blanco se vea sobre el fondo verde */
+    content: url('https://framework-gb.cdn.gob.mx/assets/images/gobmx-logo-small.svg'); /* Logo de GOB MX */
+}
+
+/* Media Queries para responsividad */
 @media (max-width: 768px) {
     .header-content {
         flex-direction: column;
         text-align: center;
     }
 
+    .sep-logo {
+        margin-bottom: 15px;
+    }
+
     .navbar {
         flex-direction: column;
-        align-items: center;
-        margin-top: 10px;
+        width: 100%;
+    }
+
+    .navbar-title, .nav-link {
+        margin: 5px 0;
     }
 
     .details-card {
         flex-direction: column;
     }
 
+    .details-left {
+        border-right: none;
+        border-bottom: 1px solid var(--gob-border-gray);
+    }
+
     .footer-content {
         flex-direction: column;
-        align-items: center;
+    }
+
+    .footer-col {
+        min-width: auto;
+        text-align: center;
     }
 }
