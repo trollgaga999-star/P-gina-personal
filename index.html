@@ -3,42 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Consulta de Títulos Electrónicos</title>
+    <title>Consulta de documentos académicos electrónicos</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">
-                <img src="logo.png" alt="Gobierno de México">
+
+    <header class="header">
+        <div class="header-container">
+            <img src="https://www.gob.mx/cms/uploads/image/file/20054/escudo-nacional.svg" alt="Gobierno de México" class="header-logo">
+            <div class="header-text">
+                GOBIERNO DE<br>
+                MÉXICO
             </div>
-            <div class="siged">
-                <h1>SIGED</h1>
+            <div class="siged">SIGED</div>
+            <div class="menu-icon">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
             </div>
-        </nav>
+        </div>
     </header>
 
-    <main>
+    <main class="main-content">
+        <div class="banner"></div>
         <div class="container">
-            <h2>Consulta de documentos académicos electrónicos</h2>
-            <section class="consulta-titulo">
-                <h3>Consulta de títulos electrónicos autenticados por la DGRAIR</h3>
-                <div class="titulo">
-                    <h4>Título Autenticado</h4>
-                    <div class="detalles">
-                        <p><strong>Nombre:</strong> JOSUE ALAN CRUZ RAMIREZ</p>
-                        <p><strong>Nivel:</strong> LICENCIATURA</p>
-                        <p><strong>Autoridad Emisora:</strong> UNIVERSIDAD DEL VALLE DE MEXICO</p>
-                        <p><strong>Carrera:</strong> CONTADURÍA PÚBLICA Y FINANZAS</p>
-                        <p><strong>Folio Digital:</strong> 0e0f202a-84af-45ad-93e6-f11005c602d0</p>
+            <h1 class="page-title">Consulta de documentos académicos electrónicos</h1>
+            <nav class="breadcrumb">
+                Inicio > Consulta > Documentos académicos electrónicos > Título autenticado > Detalle
+            </nav>
+
+            <h2 class="section-title">Consulta de títulos electrónicos autenticados por la DGAIR</h2>
+            <div class="content-box">
+                <h3 class="subtitle">Título Autenticado</h3>
+                <div class="details-grid">
+                    <div class="image-section">
+                        <img src="https://via.placeholder.com/150x200.png?text=Título+Electrónico" alt="Imagen de Título Autenticado" class="certificate-image">
+                    </div>
+                    <div class="info-section">
+                        <div class="detail-item">
+                            <span class="label">Nombre:</span>
+                            <span class="value">JOSUE ALAN CRUZ RAMIREZ</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Nivel:</span>
+                            <span class="value">LICENCIATURA</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Autoridad Emisora:</span>
+                            <span class="value">UNIVERSIDAD DEL VALLE DE MÉXICO</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Carrera:</span>
+                            <span class="value">CONTADURÍA PÚBLICA Y FINANZAS</span>
+                        </div>
+                        <div class="detail-item">
+                            <span class="label">Folio Digital:</span>
+                            <span class="value">5e9f73f0-fada-454d-8ba5-3103239a5286</span>
+                        </div>
                     </div>
                 </div>
-            </section>
+            </div>
+
+            <p class="disclaimer">
+                La información de los certificados que se muestran en este portal, son el resultado de la integración de información que envían las autoridades educativas de los estados y la Ciudad de México. En caso de que la información presentada no coincida con tus resultados académicos en el ciclo escolar o no esté disponible, por favor ponte en contacto con la autoridad de tu centro escolar.
+            </p>
         </div>
     </main>
 
-    <footer>
-        <p>Gobierno de México</p>
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-links">
+                <a href="#">Enlaces</a>
+                <a href="#">Participa</a>
+                <a href="#">Transparencia</a>
+                <a href="#">Denuncia</a>
+            </div>
+            <div class="footer-legal">
+                <a href="#">¿Qué es gob.mx?</a>
+                <a href="#">Portal de datos abiertos</a>
+                <a href="#">Declaración de accesibilidad</a>
+                <a href="#">Aviso de privacidad integral</a>
+                <a href="#">Aviso de privacidad simplificado</a>
+                <a href="#">Términos y Condiciones</a>
+                <a href="#">Política de seguridad</a>
+                <a href="#">Mapa de sitio</a>
+            </div>
+            <div class="footer-social">
+                <a href="#">Denuncia contra servidores públicos</a>
+            </div>
+        </div>
     </footer>
+
 </body>
 </html>
